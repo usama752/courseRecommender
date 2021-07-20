@@ -1,0 +1,240 @@
+
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Smart recommender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Subject Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+   <link rel="stylesheet" href="{% static  'css/fontawesome-all.min.css' %}">
+   <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+   <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">
+   <link rel="stylesheet" href="{% static 'css/smoothbox.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <!-- font-awesome icons -->
+    <link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet">
+
+	<!-- //Custom Theme files -->
+    <!-- online-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:100i,400,500,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+	<!-- //online-fonts -->
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner">
+        <!-- header -->
+        
+           <header class="w3l-header">
+  <div class="hero-header-11">
+    <div class="hero-header-11-content">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light py-md-2 py-0 px-0">
+          <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logo-icon.png' %}" alt="" />smart recommender</a>
+          <!-- if logo is image enable this   
+        <a class="navbar-brand" href="#index.html">
+            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+        </a> -->
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+             
+              <li class="nav-item @@about-active">
+                <a class="nav-link" href="{% url 'logout' %}"><span>LogOut</span></a>
+              </li>
+              
+            
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+        </header>
+        <!-- //header -->
+        <div class="container">
+            <!-- banner-text -->
+            <div class="banner-text">
+                <div class="slider-info">
+                    <h3>What would <span>you like </span> to learn?</h3>
+					<a href="about.html" class="banner-button btn mt-md-5 mt-4">Know More</a>
+				</div>
+            </div>
+        </div>
+    </div>
+	 <!-- //banner-text -->
+	 <!--banner form-->
+	<section class="banner_form py-5">
+		<div class="container py-lg-3">
+			<div class="row ban_form">
+				<div class="col-lg-8 bg-white fom-left">
+					<div class="categories_sub cats1">
+						<h2 class="heading-agileinfo">Welcome To <span>smart recommender </span></h2>
+						</div>
+				</div>
+				<div class="col-lg-4 reg-fom">
+					<h4 class="text-white text-center">Courses Search</h4>
+						<form action="{% url 'filter' %}" method="post">
+              {% csrf_token %}
+							<div class="reg-fom-btm mt-5">
+								<div class="fields">
+									<span class="text-white mb-2">Select Degree</span>
+										<select class="form-control">
+											<option>BS Computer Science</option>
+											<option>BS IT</option>
+											<option>BS Software Engineering</option>
+										
+										</select>
+								</div>
+							</div>
+              <div class="reg-fom-btm mt-3">
+								<div class="fields">
+									<span class="text-white mb-2">Select Semester</span>
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+                      <option>4</option>
+										
+										</select>
+								</div>
+							</div>
+							
+							
+							<div class="reg-fom-btm mt-3">
+								<input type="submit" value="Search">
+							</div>
+						</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	  <!-- /services -->
+   
+<!-- //stats -->
+<!--/newsletter-->
+    <footer class="newsletter_right pymd-5 py-4" id="footer">
+        <div class="container">
+            <div class="inner-sec py-md-5 py-3">
+                <div class="row mb-md-4 mb-md-3">
+					
+					
+            </div>
+        </div>
+    </footer>
+	
+    <!--//newsletter-->
+
+<!-- js -->
+    <script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+<!-- //js -->
+<!-- carousel(for feedback) -->
+	<script src="{% static 'js/owl.carousel.js' %}"></script>
+	<script>
+		$(document).ready(function () {
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 10,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					600: {
+						items: 2,
+						nav: false
+					},
+					1000: {
+						items: 3,
+						nav: true,
+						loop: false,
+						margin: 20
+					}
+				}
+			})
+		})
+	</script>
+	
+	<!-- //carousel(for feedback) -->
+<!-- stats -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'js/jquery.countup.js' %}"></script>
+		<script>
+			$('.counter').countUp();
+		</script>
+<!-- //stats -->
+
+    <!-- start-smooth-scrolling -->
+    <script src="{% static 'js/move-top.js' %}"></script>
+    <script src="{% static 'js/easing.js' %}"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+            };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
